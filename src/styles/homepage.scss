@@ -1,0 +1,79 @@
+.HomePage{
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 80px;
+    line-height: 100px;
+    span {
+      color: hsl(32, 100%, 85%);
+      font-size: 1.8em;
+      animation: lightsOn 5s infinite;
+    }
+
+    @keyframes lightsOn {
+      0% {
+        filter: drop-shadow(0 0 10px  hsl(32, 100%, 56%));
+      }
+      50% {
+        filter: drop-shadow(0 0 7px  hsl(32, 100%, 56%));
+      }
+      100% {
+        filter: drop-shadow(0 0 10px  hsl(32, 100%, 56%));
+      }
+    }
+  }
+
+  .profile-img {
+    height: 90vh;
+    animation: lightChanges 15s infinite;
+  }
+  @keyframes lightChanges {
+    0% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    3% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    4% {
+      filter: drop-shadow(0 0 10px hsl(32, 100%, 56%));
+    }
+    5% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    10% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    29% {
+      filter: drop-shadow(0 0 20px hsl(32, 100%, 56%));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(32, 100%, 56%));
+    }
+    80% {
+      filter: drop-shadow(0 0 50px hsl(32, 100%, 56%));
+    }
+    90% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    100% {
+      filter: drop-shadow(0 0 0px hsl(32, 100%, 56%));
+    }
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .HomePage {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}

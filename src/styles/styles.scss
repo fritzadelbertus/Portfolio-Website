@@ -1,0 +1,66 @@
+@import './homepage.scss';
+@import './aboutpage.scss';
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+$primaryColor       : hsl(32, 100%, 56%);
+$primaryColorDark   : hsla(32, 100%, 56%, 0.752);
+$primaryColorLight  : hsl(32, 100%, 75%);
+$backgroundColor1   : hsl(247, 24%, 7%);
+$backgroundColor2   : hsl(248, 25%, 12%);
+$backgroundColor3   : hsl(250, 33%, 4%);
+$headerColor        : hsl(60, 100%, 100%);
+$textColor          : hsl(235, 15%, 70%);
+$whiteColor         : hsl(32, 100%, 85%);
+$shadowBoxColor     : hsl(32, 100%, 56%);
+$highlightColor     : hsl(32, 100%, 56%);
+$strokeColor        : hsl(32, 100%, 56%);
+$transition         : 0.5s;
+$textFont           :'Courier New', Courier, monospace;
+
+.page {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Staatliches', cursive;
+}
+
+article {
+  color: hsl(235, 15%, 70%);
+}
+
+body {
+  background-color: $backgroundColor1;
+}
+h1 {
+  color: $headerColor;
+}
+@keyframes borderDance {
+  0% {
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
+    width: 70vh;
+    height: 70vh;
+  }
+  25% {
+    border-radius: 67% 33% 31% 69% / 76% 33% 67% 24% ;
+    width: 50vh;
+    height: 50vh;
+  }
+  50% {
+    border-radius: 30% 70% 71% 29% / 59% 70% 30% 41% ;
+  }
+  75% {
+    border-radius: 84% 16% 22% 78% / 40% 16% 84% 60% ;
+    width: 100vh;
+    height: 100vh;
+  }
+  100% {
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
+    width: 70vh;
+    height: 70vh;
+  }
+}
