@@ -5,6 +5,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
   h1 {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,66 @@
+.ProjectPage {
+  padding: 30px 50px;
+  article p {
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:hsl(248, 25%, 12%);
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .project-img {
+      border-radius: 10px;
+      overflow: hidden;
+      flex-basis: 40%;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        object-fit:contain;
+      }
+    }
+    .card-title {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+    .card-desc {
+      text-align: justify;
+    }
+    .card-tech-stack {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      font-size: 30px;
+      color: hsl(32, 100%, 56%);
+      filter: drop-shadow(0 0 0.7px  hsla(32, 100%, 56%, 0.752));
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: space-between;
+      flex-basis: 60%;
+    }
+  }
+}
