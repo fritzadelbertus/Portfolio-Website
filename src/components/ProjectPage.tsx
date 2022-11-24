@@ -15,6 +15,8 @@ function ProjectPage() {
           cardDesc={cardInfo.desc}
           cardStack={cardInfo.stack}
           cardImgSource={cardInfo.src}
+          cardStatus={cardInfo.status}
+          cardLink={cardInfo.link}
           />
         ))}
       </div>

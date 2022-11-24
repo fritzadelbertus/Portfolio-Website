@@ -9,7 +9,7 @@ function AboutPage() {
         <h2>About Me</h2>
         <p className='text-desc'>
           Greetings! I'm <span className='about-emphasize'>Fritz Adelbertus Sitindaon</span>, a 19 years old college freshman majoring Mathematics. 
-          I have a genuine interest in subjects such as math, computer science, informatics, and art.<br />
+          I have a genuine interest in math, computer science, informatics, and art.<br />
           <br />
           I'm a <span className='about-emphasize'>0$ Front-End Web Developer</span> and I haven't spent a single penny in my journey to learn Web Development. 
           I spend my time <span className='about-emphasize'>creating projects, attending free courses, and reading documentations</span>. <br />

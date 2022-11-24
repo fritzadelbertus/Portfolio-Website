@@ -4,63 +4,95 @@
       font-family: 'Lato', sans-serif;
       font-size: 14px;
       font-weight: bold;
-    }
-  
+  }
   h2 {
     text-align: center;
     color: white;
     font-size: 40px;
   }
+  a {
+    text-decoration: none;
+  }
   .project-cards {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-items: center;
+    gap: 20px
   }
   .project-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 20px;
+    position: relative;
+    width: 270px;
+    border-radius: 10px;
+    overflow: hidden;
     background-color:hsl(248, 25%, 12%);
-    transition: 0.5s;
-    &:hover {
-      transform: scale(1.1);
-    }
+    box-shadow: 10px 10px 20px 5px hsl(250, 33%, 4%);
     .project-img {
-      border-radius: 10px;
-      overflow: hidden;
-      flex-basis: 40%;
       display: flex;
       justify-content: center;
+      position: relative;
+      &:hover > .image-overlay {
+        opacity: 100%;
+        transition: 0.25s;
+      }
+      .image-overlay {
+        background-color: hsla(32, 100%, 75%, 0.5);
+        opacity:0 ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 15%;
+          height: 20%;
+        }
+      }
       img {
         height: 100%;
-        object-fit:contain;
+        object-fit:cover;
       }
+    }
+    .card-status {
+      position: absolute;
+      left: 5%;
+      bottom: 10%;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+      text-transform: capitalize;
     }
     .card-title {
       font-size: 20px;
       color: white;
-      text-align: center;
+      margin-bottom: 5px;
+      &:hover {
+        color: hsl(32, 100%, 85%);
+        filter: drop-shadow(0 0 0.7px  hsl(32, 100%, 56%));
+      }
     }
     .card-desc {
       text-align: justify;
     }
     .card-tech-stack {
-      margin-top: 10px;
+      margin-top: 20px;
       display: flex;
+      justify-content: flex-end;
       gap: 10px;
-      font-size: 30px;
+      font-size: 24px;
       color: hsl(32, 100%, 56%);
-      filter: drop-shadow(0 0 0.7px  hsla(32, 100%, 56%, 0.752));
+      filter: drop-shadow(0 0 0.5px  hsla(32, 100%, 56%, 0.752));
     }
     article {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      justify-content: space-between;
-      flex-basis: 60%;
+      position: relative;
+      padding: 20px;
     }
   }
 }

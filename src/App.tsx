@@ -11,6 +11,9 @@ function App() {
       <HomePage />
       <AboutPage />
       <ProjectPage />
+      <footer>
+        Copyright © 2022 Fritz Adelbertus Sitindaon.
+      </footer>
     </div>
    
   )

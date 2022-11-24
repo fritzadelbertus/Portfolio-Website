@@ -23,12 +23,13 @@ $textFont           :'Courier New', Courier, monospace;
   height: 100vh;
 }
 .AboutPage{
+  min-height: 100vh;
+  height: auto;
   overflow: visible;
 }
 .ProjectPage{
-  overflow: visible;
-  height: auto;
   min-height: 100vh;
+  height: auto;
 }
 
 * {
@@ -40,9 +41,14 @@ body {
   font-family: 'Staatliches', cursive;
 }
 article {
-  color: hsl(235, 15%, 70%);
+  color: hsl(234, 16%, 75%);
 }
-
+footer {
+  background-color: hsl(32, 100%, 56%);
+  padding: 20px;
+  text-align: center;
+  color: #f1f1f1;
+}
 body {
   background-color: $backgroundColor1;
 }

@@ -1,7 +1,7 @@
 .AboutPage {
   padding: 20px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-evenly;
   article {
@@ -29,9 +29,10 @@
     .social-links {
       width: 100%;
       display: flex;
+      justify-content: center;
       gap: 20px;
       a {
-        color: white;
+        color: hsl(32, 100%, 56%);;
         font-size: 30px;
         &:hover {
           color: hsl(32, 100%, 56%);
