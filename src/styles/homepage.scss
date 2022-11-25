@@ -1,23 +1,16 @@
-@mixin flex-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .HomePage {
-  @include flex-column-center;
+  @include flex-column-center(space-between);
   width: 100vw;
   height: 100vh;
-  justify-content: space-between;
   padding: 20px;
   overflow: hidden;
   article {
-    h1{
+    h1 {
       @include flex-column-center;
       padding: 20px;
       font-size: 5rem;
       line-height: 6rem;
-      span{
+      span {
         font-size: 1.8em;
         animation: lightsOn 5s infinite;
       }

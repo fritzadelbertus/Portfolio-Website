@@ -1,15 +1,10 @@
-@mixin flex-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .ProjectPage {
   padding: 30px 50px;
   min-height: 100vh;
   height: auto;
   article > h2 {
     text-align: center;
+    margin-top: 15px;
   }
   .project-cards {
     width: 100%;
@@ -17,6 +12,7 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     place-items: center;
     gap: 20px;
+    padding: 10px;
     .project-card {
       position: relative;
       width: 270px;
@@ -26,8 +22,7 @@
         @include flex-column-center;
         position: relative;
         .image-overlay {
-          @include flex-column-center;
-          justify-content: center;
+          @include flex-column-center(center);
           width: 100%;
           height: 100%;
           opacity:0 ;
@@ -57,7 +52,7 @@
           bottom: 10%;
           padding: 5px 10px;
           border-radius: 5px;
-          border-width: 1px;
+          border-width: 2px;
           border-style: solid;
           font-size: 13px;
           text-transform: capitalize;

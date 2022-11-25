@@ -6,10 +6,10 @@ function AboutPage() {
     <div className="AboutPage page">
       <div className='about-image-box'>
         <div className='blobs'>
-          <img src={blob} alt="" />
+          <img src={blob} alt="blob image" />
         </div>
         <div className='blobs'>
-          <img src={blob} alt="" />
+          <img src={blob} alt="blob glow image" />
         </div>
         <img src={aboutImg} alt="A photo of me" />
       </div>

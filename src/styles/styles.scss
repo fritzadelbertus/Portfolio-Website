@@ -1,8 +1,15 @@
+@mixin flex-column-center($justify: flex-start) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justify
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Staatliches&display=swap');
 @import './colors.scss';
 @import './homepage.scss';
 @import './aboutpage.scss';
 @import './projectpage.scss';
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Staatliches&display=swap');
 
 :root {
   font-size: 16px;
@@ -13,26 +20,37 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 h1, h2 {
   font-family: 'Staatliches', cursive;
 }
+
 p {
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
 footer {
   font-family: 'Staatliches', cursive;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-
 }
 
-@media (min-width: 768px) {
+@media (min-width: 601px) {
+  // For Tablet
+  .AboutPage > article > .social-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 900px) {
   // For Desktop
   .HomePage {
     justify-content: space-evenly;
+    flex-direction: row;
+  }
+  .AboutPage {
     flex-direction: row;
   }
 }

@@ -1,16 +1,8 @@
-type ProjectData = {
-  id: number,
-  title: string,
-  desc: string,
-  stack: string[],
-  src: string,
-  status: string,
-  link: string
-}
+import ProjectDataShape from '../data/projectcardtype'
 
-const baseURL = (id: number) => `/src/assets/project${id}.png`;
+const baseURL = (id: number) => `/projectphotos/project${id}.png`;
 
-const projectData: ProjectData[] = [
+const projectData: ProjectDataShape[] = [
   {
     id: 1,
     title: 'Pokédex',
@@ -24,7 +16,7 @@ const projectData: ProjectData[] = [
     id: 2,
     title: 'Radabase',
     desc: 'A website to search past papers from a database.',
-    stack: ['html5', 'sass', 'square-js', 'react'],
+    stack: ['html5', 'sass', 'react'],
     src: baseURL(2),
     status: 'finished',
     link: 'https://fritzadelbertus.github.io/PP04_Radabase/',

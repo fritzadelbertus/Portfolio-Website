@@ -1,5 +1,39 @@
 import projectData from "./data/projectdata"
-import ProjectCard from "./ProjectCard"
+import viewSvg from '../assets/viewicon.svg'
+import ProjectDataShape from './data/projectcardtype'
+
+function ProjectCard( { title, desc, stack, src, status, link }: ProjectDataShape ) {
+  const statusColor = status === 'finished' ? 'green' 
+  : status === 'on going' ? 'orange' : 'red'
+  
+  return (
+    <div className="project-card box-coloring">
+      <a href={link} target="_blank">
+        <div className="project-img">
+          <div className='image-overlay'>
+            <img src={viewSvg} alt="eye icon" />
+          </div>
+          <img src={src} alt={title} />
+        </div>
+      </a>
+      <article>
+        <p className="card-status"
+          style={{color: `${statusColor}`,
+          borderColor: `${statusColor}` }}>{status}</p>
+        <div>
+          <a href={link} target="_blank">
+            <p className="card-title">{title}</p>
+          </a>
+          <p className="card-desc">{desc}</p>
+        </div>
+        <p className="card-tech-stack">
+          {stack.map((item: string) => (
+            <i className={`fa-brands fa-${item}`}></i>
+          ))}</p>
+      </article>
+    </div>
+  )
+}
 
 function ProjectPage() {
   return (
@@ -10,14 +44,7 @@ function ProjectPage() {
       </article>
       <div className="project-cards">
         {projectData.map((cardInfo) => (
-          <ProjectCard 
-          cardTitle={cardInfo.title}
-          cardDesc={cardInfo.desc}
-          cardStack={cardInfo.stack}
-          cardImgSource={cardInfo.src}
-          cardStatus={cardInfo.status}
-          cardLink={cardInfo.link}
-          />
+          <ProjectCard key={cardInfo.id} {...cardInfo} />
         ))}
       </div>
     </div>
