@@ -1,98 +1,87 @@
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .ProjectPage {
   padding: 30px 50px;
-  article p {
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      font-weight: bold;
-  }
-  h2 {
+  min-height: 100vh;
+  height: auto;
+  article > h2 {
     text-align: center;
-    color: white;
-    font-size: 40px;
-  }
-  a {
-    text-decoration: none;
   }
   .project-cards {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     place-items: center;
-    gap: 20px
-  }
-  .project-card {
-    position: relative;
-    width: 270px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color:hsl(248, 25%, 12%);
-    box-shadow: 10px 10px 20px 5px hsl(250, 33%, 4%);
-    .project-img {
-      display: flex;
-      justify-content: center;
+    gap: 20px;
+    .project-card {
       position: relative;
-      &:hover > .image-overlay {
-        opacity: 100%;
-        transition: 0.25s;
-      }
-      .image-overlay {
-        background-color: hsla(32, 100%, 75%, 0.5);
-        opacity:0 ;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      width: 270px;
+      border-radius: 10px;
+      overflow: hidden;
+      a > .project-img {
+        @include flex-column-center;
+        position: relative;
+        .image-overlay {
+          @include flex-column-center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          opacity:0 ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          img {
+            width: 15%;
+            height: 20%;
+          }
+        }
+        &:hover > .image-overlay {
+          opacity: 100%;
+          transition: 0.25s;
+        }
         img {
-          width: 15%;
-          height: 20%;
+          height: 100%;
+          object-fit:cover;
         }
       }
-      img {
-        height: 100%;
-        object-fit:cover;
+      article {
+        position: relative;
+        padding: 20px;
+        .card-status {
+          position: absolute;
+          left: 5%;
+          bottom: 10%;
+          padding: 5px 10px;
+          border-radius: 5px;
+          border-width: 1px;
+          border-style: solid;
+          font-size: 13px;
+          text-transform: capitalize;
+        }
+        div {
+          a {
+            text-decoration: none;
+            .card-title {
+              font-size: 20px;
+              margin-bottom: 5px;
+            }
+          }
+          .card-desc {
+            text-align: justify;
+          }
+        }
+        .card-tech-stack {
+          margin-top: 20px;
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          font-size: 24px;
+        }
       }
-    }
-    .card-status {
-      position: absolute;
-      left: 5%;
-      bottom: 10%;
-      padding: 5px 10px;
-      border-radius: 5px;
-      border-width: 1px;
-      border-style: solid;
-      font-size: 13px;
-      font-weight: bold;
-      font-family: 'Lato', sans-serif;
-      text-transform: capitalize;
-    }
-    .card-title {
-      font-size: 20px;
-      color: white;
-      margin-bottom: 5px;
-      &:hover {
-        color: hsl(32, 100%, 85%);
-        filter: drop-shadow(0 0 0.7px  hsl(32, 100%, 56%));
-      }
-    }
-    .card-desc {
-      text-align: justify;
-    }
-    .card-tech-stack {
-      margin-top: 20px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      font-size: 24px;
-      color: hsl(32, 100%, 56%);
-      filter: drop-shadow(0 0 0.5px  hsla(32, 100%, 56%, 0.752));
-    }
-    article {
-      position: relative;
-      padding: 20px;
     }
   }
 }

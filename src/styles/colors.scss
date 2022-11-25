@@ -1,0 +1,83 @@
+$primaryColorDark   : hsla(32, 100%, 56%, 0.752);
+$primaryColorLight  : hsl(32, 100%, 75%);
+$backgroundColor1   : hsl(247, 24%, 7%);
+$backgroundColor2   : hsl(248, 25%, 12%);
+$backgroundColor3   : hsl(250, 33%, 4%);
+$textColor          : hsl(235, 15%, 70%);
+$whiteColor         : hsl(32, 100%, 85%);
+$shadowBoxColor     : hsl(32, 100%, 56%);
+$highlightColor     : hsl(32, 100%, 56%);
+$strokeColor        : hsl(32, 100%, 56%);
+
+$colorOrange: #ff961f;
+$colorLightOrange: #ffdbb3;
+$colorWhite: #f1f1f1;
+
+// COLORS
+body {
+  background-color: hsl(247, 24%, 7%);
+}
+h1,h2 {
+  color: $colorWhite;
+}
+h2 {
+  font-size: 40px;
+}
+article {
+  color: hsl(234, 16%, 75%);
+}
+.box-coloring {
+  background-color:hsl(248, 25%, 12%);
+  box-shadow: 10px 10px 20px 5px hsl(250, 33%, 4%);
+}
+.HomePage > article > h1 > span {
+  color: $colorLightOrange;
+}
+.AboutPage > {
+  article > {
+    .text-desc > .about-emphasize {
+      color: $colorLightOrange;
+      filter: drop-shadow(0 0 0.7px  $colorOrange);
+    }
+    .social-links > a {
+      color: $colorOrange;
+      &:hover {
+        filter: drop-shadow(0 0 0.7px  #{$colorOrange}CC);
+      }
+    }
+  }
+} 
+.ProjectPage > .project-cards > .project-card {
+  a > .project-img > .image-overlay {
+    background-color: hsla(32, 100%, 75%, 0.5);
+  }
+  article > {
+    div > a > .card-title {
+      color: $colorWhite;
+      &:hover {
+        color: $colorLightOrange;
+        filter: drop-shadow(0 0 0.7px  $colorOrange);
+      }
+    }
+    .card-tech-stack {
+      color: $colorOrange;
+      filter: drop-shadow(0 0 0.5px  #{$colorOrange}CC);
+    }
+  }
+}
+
+footer {
+  color: $colorWhite;
+  background-color: $colorOrange;
+}
+
+@media (min-width: 768px) {
+  .AboutPage > article > .social-links > {
+    a {
+      color: $colorWhite;
+      &:hover {
+        color: $colorOrange;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ function ProjectPage() {
   return (
     <div className="ProjectPage page">
       <article>
-        <p>{'<ProjectsPage />'}</p>
+        <p className="text-heading">{'<ProjectsPage />'}</p>
         <h2>Projects</h2>
       </article>
       <div className="project-cards">

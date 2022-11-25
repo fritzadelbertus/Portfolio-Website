@@ -4,7 +4,7 @@ function HomePage() {
 	return (
 		<div className="HomePage page">
 			<article>
-				<p>{'<HomePage />'}</p>
+				<p className="text-heading">{'<HomePage />'}</p>
 				<h1>Hello, I'm <br /> <span>Fritz</span></h1>
 			</article>
 			<img className='profile-img' src={profileImg} alt="Profile" />

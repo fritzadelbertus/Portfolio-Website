@@ -14,7 +14,7 @@ function ProjectCard( { cardTitle, cardDesc, cardStack, cardImgSource, cardStatu
   const statusColor = cardStatus === 'finished' ? 'green' 
   : cardStatus === 'on going' ? 'orange' : 'red'
   return (
-    <div className="project-card">
+    <div className="project-card box-coloring">
       <a href={cardLink} target="_blank">
         <div className="project-img">
           <div className='image-overlay'>
@@ -24,9 +24,9 @@ function ProjectCard( { cardTitle, cardDesc, cardStack, cardImgSource, cardStatu
         </div>
       </a>
       <article>
-      <p className="card-status"
-      style={{color: `${statusColor}`,
-      borderColor: `${statusColor}` }}>{cardStatus}</p>
+        <p className="card-status"
+          style={{color: `${statusColor}`,
+          borderColor: `${statusColor}` }}>{cardStatus}</p>
         <div>
           <a href={cardLink} target="_blank">
             <p className="card-title">{cardTitle}</p>

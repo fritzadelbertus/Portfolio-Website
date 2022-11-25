@@ -1,28 +1,41 @@
-.AboutPage {
-  padding: 20px;
+@mixin flex-column-center {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
+}
+
+.AboutPage {
+  @include flex-column-center;
   justify-content: space-evenly;
+  padding: 20px;
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+  .about-image-box {
+    z-index: -1;
+    position: relative;
+    .blobs {
+      @include flex-column-center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      justify-content: center;
+      img {
+        transform: scale(2.2);
+      }
+    }
+    .blobs:nth-child(2) {
+      filter: blur(30px);
+    }
+  }
   article {
     border-radius: 30px;
-    background-color: hsl(248, 25%, 12%);
     padding: 40px 50px;
     flex-basis: 70%;
     width: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
     max-width: 800px;
-    h2 {
-      font-family: 'Staatliches', cursive;
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: white;
-    }
-    p {
-      font-size: 14px;
-    }
-    .text-desc {
+    .text-desc{
       font-size: 17px;
       margin-bottom: 10px;
     }
@@ -32,36 +45,8 @@
       justify-content: center;
       gap: 20px;
       a {
-        color: hsl(32, 100%, 56%);;
         font-size: 30px;
-        &:hover {
-          color: hsl(32, 100%, 56%);
-          filter: drop-shadow(0 0 0.7px  hsla(32, 100%, 56%, 0.752));
-        }
       }
-    }
-  }
-  .about-emphasize {
-    color: hsl(32, 100%, 85%);
-    filter: drop-shadow(0 0 0.7px  hsl(32, 100%, 56%));
-  }
-  .about-image-box {
-    z-index: -1;
-    position: relative;
-    .blobs {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        transform: scale(2.2);
-      }
-    }
-    .blobs:nth-child(2) {
-      filter: blur(30px);
     }
   }
 }

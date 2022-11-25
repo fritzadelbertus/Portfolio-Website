@@ -1,35 +1,11 @@
+@import './colors.scss';
 @import './homepage.scss';
 @import './aboutpage.scss';
 @import './projectpage.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Staatliches&display=swap');
-$primaryColor       : hsl(32, 100%, 56%);
-$primaryColorDark   : hsla(32, 100%, 56%, 0.752);
-$primaryColorLight  : hsl(32, 100%, 75%);
-$backgroundColor1   : hsl(247, 24%, 7%);
-$backgroundColor2   : hsl(248, 25%, 12%);
-$backgroundColor3   : hsl(250, 33%, 4%);
-$headerColor        : hsl(60, 100%, 100%);
-$textColor          : hsl(235, 15%, 70%);
-$whiteColor         : hsl(32, 100%, 85%);
-$shadowBoxColor     : hsl(32, 100%, 56%);
-$highlightColor     : hsl(32, 100%, 56%);
-$strokeColor        : hsl(32, 100%, 56%);
-$transition         : 0.5s;
-$textFont           :'Courier New', Courier, monospace;
 
-.page {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-.AboutPage{
-  min-height: 100vh;
-  height: auto;
-  overflow: visible;
-}
-.ProjectPage{
-  min-height: 100vh;
-  height: auto;
+:root {
+  font-size: 16px;
 }
 
 * {
@@ -37,46 +13,26 @@ $textFont           :'Courier New', Courier, monospace;
   margin: 0;
   box-sizing: border-box;
 }
-body {
+h1, h2 {
   font-family: 'Staatliches', cursive;
 }
-article {
-  color: hsl(234, 16%, 75%);
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
+
 footer {
-  background-color: hsl(32, 100%, 56%);
+  font-family: 'Staatliches', cursive;
   padding: 20px;
   text-align: center;
-  color: #f1f1f1;
+
 }
-body {
-  background-color: $backgroundColor1;
-}
-h1 {
-  color: $headerColor;
-}
-@keyframes borderDance {
-  0% {
-    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
-    width: 70vh;
-    height: 70vh;
-  }
-  25% {
-    border-radius: 67% 33% 31% 69% / 76% 33% 67% 24% ;
-    width: 50vh;
-    height: 50vh;
-  }
-  50% {
-    border-radius: 30% 70% 71% 29% / 59% 70% 30% 41% ;
-  }
-  75% {
-    border-radius: 84% 16% 22% 78% / 40% 16% 84% 60% ;
-    width: 100vh;
-    height: 100vh;
-  }
-  100% {
-    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
-    width: 70vh;
-    height: 70vh;
+
+@media (min-width: 768px) {
+  // For Desktop
+  .HomePage {
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 }

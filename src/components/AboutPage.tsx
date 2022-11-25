@@ -4,8 +4,17 @@ import blob from '../assets/aboutblob.svg'
 function AboutPage() {
   return (
     <div className="AboutPage page">
-      <article>
-        <p>{'<AboutPage />'}</p>
+      <div className='about-image-box'>
+        <div className='blobs'>
+          <img src={blob} alt="" />
+        </div>
+        <div className='blobs'>
+          <img src={blob} alt="" />
+        </div>
+        <img src={aboutImg} alt="A photo of me" />
+      </div>
+      <article className='box-coloring'>
+        <p className="text-heading">{'<AboutPage />'}</p>
         <h2>About Me</h2>
         <p className='text-desc'>
           Greetings! I'm <span className='about-emphasize'>Fritz Adelbertus Sitindaon</span>, a 19 years old college freshman majoring Mathematics. 
@@ -27,15 +36,6 @@ function AboutPage() {
           <a href="https://github.com/fritzadelbertus"><i className="fa-brands fa-github"></i></a>
         </div>
       </article>
-      <div className='about-image-box'>
-        <div className='blob1 blobs'>
-          <img src={blob} alt="" />
-        </div>
-        <div className='blob2 blobs'>
-          <img src={blob} alt="" />
-        </div>
-        <img src={aboutImg} alt="A photo of me" />
-      </div>
     </div>
   )
 }
